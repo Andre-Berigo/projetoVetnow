@@ -28,7 +28,7 @@ import br.una.vetnow.negocio.UsuarioService;
  *
  */
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "Usuario")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "usuario")
 public class UsuarioController {
    
     private final UsuarioService usuarioService;

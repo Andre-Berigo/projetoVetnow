@@ -1,7 +1,7 @@
 package br.una.vetnow.persistencia;
 
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
-
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -29,14 +29,14 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
  *
  */
 @Configuration
-@EnableDynamoDBRepositories(basePackageClasses = { UsuarioRepository.class })
+@EnableDynamoDBRepositories(basePackages = "br.una.vetnow.persistencia")
 public class DynamoDBConfig {
 
-	// @Value("${amazon.aws.accesskey}")
-	private String amazonAWSAccessKey = "AKIASEHXHLY2VJ7MPIJ6";
+	@Value("${amazon.aws.accesskey}")
+	private String amazonAWSAccessKey;
 
-	// @Value("${amazon.aws.secretkey}")
-	private String amazonAWSSecretKey = "hk0RKHXKYu6dJOETBEOkNZ9HMe6mReRRuHGVlebC";
+	@Value("${amazon.aws.secretkey}")
+	private String amazonAWSSecretKey;
 
 	public AWSCredentialsProvider amazonAWSCredentialsProvider() {
 		return new AWSStaticCredentialsProvider(amazonAWSCredentials());

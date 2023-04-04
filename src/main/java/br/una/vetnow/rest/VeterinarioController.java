@@ -26,7 +26,7 @@ import br.una.vetnow.negocio.VeterinarioService;
  *
  */
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "Veterinario")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "veterinario")
 public class VeterinarioController {
    
     private final VeterinarioService veterinarioService;
