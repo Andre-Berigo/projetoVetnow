@@ -1,0 +1,5 @@
+br\una\vetnow\entidades\Veterinario.class
+br\una\vetnow\persistencia\DynamoDBConfig.class
+br\una\vetnow\persistencia\VeterinarioRepository.class
+br\una\vetnow\entidades\Usuario.class
+br\una\vetnow\persistencia\UsuarioRepository.class
